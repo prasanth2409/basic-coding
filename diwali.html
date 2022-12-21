@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>	
+	<title>Assignment</title>
+	<link rel="stylesheet" href="D:\Html\MDB\css\bootstrap.css">
+	<link rel="stylesheet" href="D:\Html\MDB\css\mdb.css">
+	<link rel="stylesheet" href="D:\Html\fontawesome-free-6.2.0-web\css\all.css">
+	<style>
+		body{background:url(https://png.pngtree.com/thumb_back/fh260/png-vector/20200530/ourmid/pngtree-indoor-office-png-image_2215291.jpg);background-repeat:no-repeat;background-size:cover;}
+		.page{position:absolute;margin-top:30px;margin-left:400px;width:700px;}
+		.card-header{height:120px;text-align:center;}
+		h1{font-size:50px;color:orangered;font-family: cursive;}
+		.card-body{position:relative;border:4px solid blue;height:450px;text-align:center;}
+		h2{color:lavenderblush;font:40px caption bold;margin-top:100px;}
+		.col-6{height:400px;}
+		button{height:100px;width:100px;font-size:60px;border-radius:30px;}
+		h3>span{color:darkviolet; font:40px icon; background:white; display: inline-block; padding:10px 20px;}
+		span{color:orangered; font:50px cursive; background:white; display: inline-block; padding:3px 25px;border-radius:100%;}
+		p{font:30px caption; background:white; display: inline-block; padding:3px 10px;border-radius:100%;}
+		a{font:30px caption; background:white; display: inline-block; padding:3px 10px;border-radius:100%;}
+		#like{color:green;}
+		#dislike{color:red;}		
+	</style>		
+</head>
+<body>
+	<div>
+		<div class="page">
+			<div class="container-fluid" >
+				<div class="row mt">
+					<div  class= "col-md-12">
+						<div class="card">
+							<div class="card-header bg-dark">
+								<h1>Jspiders like's App</h1>						
+							</div>
+							<div class="card-body">
+								<div class="row">
+									<div class="col-6 bg-success">
+										<h2> Likes</h2> 
+										<button onclick="incCount()"><i class="fa-sharp fa-solid fa-thumbs-up" id="like"></i></button><br><br> 
+										<h3>Likes: <a id="likes">0</a></h3>								
+									</div>
+									<div class="col-6 bg-danger">
+										<h2> Dislikes </h2> 
+										<button onclick="decCount()"><i class="fa-solid fa-thumbs-down" id="dislike"></i></button><br><br>
+										<h3>Dislikes: <p id="dislikes">0</p></h3>							
+									</div>
+								</div>						
+							</div>
+							<div class="card-footer bg-dark">
+								<h1>Total count: <span id="totalcount">0</span></h1>
+							</div>					
+						</div>				
+					</div>			
+				</div>		
+			</div>
+		</div>
+	</div>
+	<script>		
+ 		let count =0
+ 		let totalcount =0;
+ 		let spanTag= document.getElementById('totalcount');
+ 		spanTag.innerText=totalcount;
+ 		let aTag= document.getElementById('likes');
+ 		aTag.innerText=count;
+ 		function incCount()
+ 		{
+ 			count++;
+ 			aTag.innerText=count;
+ 			totalcount++;
+ 			spanTag.innerText=totalcount;
+ 		}
+ 		let decount=0
+ 		let pTag= document.getElementById('dislikes');
+ 		pTag.innerText=decount;
+ 		function decCount()
+ 		{
+ 			decount++;
+ 			pTag.innerText=decount;
+ 			totalcount++;
+ 			spanTag.innerText=totalcount;
+ 		}		
+	</script>
+</body>
+</html>

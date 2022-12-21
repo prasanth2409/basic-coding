@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Split layout</title>
+	<style>
+		div
+		{
+			position:relative; 
+			height:475px;
+			width:400px;			
+			margin:auto;
+			overflow: hidden;
+			box-shadow:0 0 20px darkcyan;
+			 
+		}
+		div:hover
+		{
+			cursor:pointer;
+		}
+		div>img
+		{
+			position:absolute;
+			width: inherit;
+			height: inherit;
+		}		
+		div>#wrapone
+		{
+			position:absolute ;
+			width: inherit;
+			height: inherit;
+			background:seagreen ;
+			transition:all 2s linear 6s;
+		}
+		div:hover>#wrapone
+		{
+			transform:translatey(-480px);
+		}
+		div>#wraptwo		
+		{
+			position:absolute ;
+			width: inherit;
+			height: inherit;
+			background:skyblue;
+			transition:all 2s linear 4s;
+		}
+		div:hover>#wraptwo
+		{
+			transform:translatey(475px);
+		}
+		div>#wrapthree
+		{
+			position:absolute ;
+			width: inherit;
+			height: inherit;
+			background:orange ;
+			transition:all 2s linear 2s;
+
+		}
+		div:hover>#wrapthree
+		{
+			transform:translateX(-405px);
+		}
+		div>#wrapfour
+		{
+			position:absolute ;
+			width: inherit;
+			height: inherit;
+			background:indianred ;
+			transition:all 2s linear 0s;
+		}
+		div:hover>#wrapfour
+		{
+			transform:translateX(400px);
+		}
+
+		
+	</style>
+</head>
+<body>
+	<div>
+		<img src="Shirt.jpg">
+		<div id="wrapone"></div>
+		<div id="wraptwo"></div>
+		<div id="wrapthree"></div>
+		<div id="wrapfour"></div>		
+	</div>
+</body>
+</html>

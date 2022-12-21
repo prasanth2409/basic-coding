@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS TO DO LIST</title>
+	<link rel="stylesheet" href="D:\Html\MDB\css\bootstrap.css">
+	<link rel="stylesheet" href="D:\Html\MDB\css\mdb.css">
+	<link rel="stylesheet" href="D:\Html\fontawesome-free-6.2.0-web\css\all.css">	
+</head>
+<body>
+	<div class="container mt-5">
+		<div class="row">
+			<div class="col-md-6 m-auto">
+				<div class="card">
+					<div class="card-header bg-primary text-white text-center">
+						<h1>JS TODO LIST</h1>
+					</div>
+					<div class="card-body bg-light">
+						<form id="task-form">
+							<div class="form-group">
+								<input type="text" placeholder="Enter Task" class="form-control" id="task">
+							</div>
+							<div class="form-group">
+								<input type="submit" class="btn btn-primary" value="ADD TASK">
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<!-- Display Tasks -->
+		<div class="row mt-5">
+			<div class="col-md-6 m-auto">
+				<ul class="list-group" id="task-list">
+					
+				</ul>
+			</div>
+		</div>
+	</div>
+
+<!-- Script Code -->
+<script>
+	
+let taskForm=document.getElementById('task-form');
+
+taskForm.addEventListener('submit',function(event)
+{
+	event.preventDefault();//To Prevent Default Submission
+	let taskInput=document.getElementById('task');
+	let task=taskInput.value.trim();
+
+	let taskList=localStorage.getItem('tasks')?JSON.parse(localStorage.getItem('tasks')):[];
+
+	taskList.unshift(task);
+
+	localStorage.setItem('tasks',JSON.stringify(taskList));
+	
+	display();
+});
+
+
+// Display Tasks
+
+function display()
+{
+	let taskListUl=document.getElementById('task-list');
+	let taskList=localStorage.getItem('tasks')?JSON.parse(localStorage.getItem('tasks')):[];
+
+	if(taskList.length!=0)
+	{
+		let eachTask=``;
+		for(let task of taskList)
+		{
+			eachTask=eachTask+`<li class="list-group-item 										list-group-item-primary mb-2">
+											<span>${task}</span>
+											<button class="close">
+												<i class="fa fa-times-circle"></i>
+											</button>
+								</li>`;
+		}
+
+		taskListUl.innerHTML=eachTask;
+	}
+}
+display();
+
+
+
+//Delete Functionality
+
+let taskListUl=document.getElementById('task-list');
+taskListUl.addEventListener('click',function(event)
+{
+	let targetElement=event.target;
+
+	if(targetElement.classList.contains("fa-times-circle"))
+	{
+		let actualElement=targetElement.parentElement.parentElement;
+		let selectedTask=actualElement.innerText;
+		let taskList=localStorage.getItem('tasks')?JSON.parse(localStorage.getItem('tasks')):[];
+
+
+		taskList=taskList.filter((task)=>
+		{
+			return task!==selectedTask
+		})
+
+		localStorage.setItem('tasks',JSON.stringify(taskList));
+		display();
+	}
+})
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

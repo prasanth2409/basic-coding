@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS TRANSFORM</title>
+	<style>
+		div
+		{
+			position:relative; 
+			height:475px;
+			width:400px;			
+			margin:auto;
+			overflow: hidden;
+			box-shadow:0 0 20px darkcyan;
+			 
+		}
+		div:hover
+		{
+			cursor:pointer;
+		}
+		div>img
+		{
+			position:absolute;
+			width: inherit;
+			height: inherit;
+		}		
+		div>#wrapper1
+		{
+			position:absolute ;
+			width: inherit;
+			height: inherit;
+			background:indianred;
+			transition:all 2s linear 6s;
+		}
+		div:hover>#wrapper1
+		{
+			transform:translatey(-480px);
+		}
+		div>#wrapper2		
+		{
+			position:absolute ;
+			width: inherit;
+			height: inherit;
+			background:greenyellow;
+			transition:all 2s linear 4s;
+		}
+		div:hover>#wrapper2
+		{
+			transform:translatey(475px);
+		}
+		div>#wrapper3
+		{
+			position:absolute ;
+			width: inherit;
+			height: inherit;
+			background:orange ;
+			transition:all 2s linear 2s;
+
+		}
+		div:hover>#wrapper3
+		{
+			transform:translateX(-405px);
+		}
+		div>#wrapper4
+		{
+			position:absolute ;
+			width: inherit;
+			height: inherit;
+			background:orangered;
+			transition:all 2s linear 0s;
+		}
+		div:hover>#wrapper4
+		{
+			transform:translateX(400px);
+		}
+
+		
+	</style>
+</head>
+<body>
+	<div>
+		<img src="Shirt.jpg">
+		<div id="wrapper1"></div>
+		<div id="wrapper2"></div>
+		<div id="wrapper3"></div>
+		<div id="wrapper4"></div>		
+	</div>
+</body>
+</html>

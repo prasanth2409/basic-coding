@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+	<link rel="stylesheet" href="D:\Html\MDB\css\bootstrap.css">
+	<link rel="stylesheet" href="D:\Html\MDB\css\mdb.css">
+	<link rel="stylesheet" href="D:\Html\fontawesome-free-6.2.0-web\css\all.css">	
+	<style>
+		body{position:absolute;}
+		.card{position:relative;margin-top:160px;margin-left:650px;border:8px solid blue;text-align:center;padding:20px;background:lightskyblue;border-radius:30px;}
+		button{border:3px solid black;border-radius:100px;font-size:25px;padding:5px;color:white; background:black;}
+		#foot{border-radius:20px;}
+		#head{border-radius:20px;}
+		h2{font-family:cursive;font-size:35px;font-weight:bold;}
+	</style>
+</head>
+<body>
+	<div class="card">
+		<div class="card-header bg-success" id="head"><h2>CALCULATOR</h2><hr/></div>
+		<div class="card-body ">
+			<input type="number" placeholder="Number 1" id="num1" class="form-control"><br />
+			<input type="number" placeholder="Number 2" id="num2" class="form-control"><br /><br>
+			<button id="add"><i class="fa-solid fa-plus"></i> </button>
+			<button id="sub"><i class="fa-solid fa-minus"></i> </button>
+			<button id="mul"><i class="fa-solid fa-xmark"></i> </button>
+			<button id="div"><i class="fa-solid fa-divide"></i> </button><br>
+		</div>
+		<div class="card-footer bg-dark" id="foot"><input type="text"  id="result"  class="form-control">
+		</div>			
+	</div>
+	
+	<script>
+		var n1=document.getElementById("num1");
+		var n2=document.getElementById("num2");
+		var res=document.getElementById("result");
+
+		document.getElementById("add").addEventListener("click",function()
+		{
+			res.value=parseInt(n1.value)+parseInt(n2.value);
+		});
+		document.getElementById("sub").addEventListener("click",function()
+		{
+			res.value=parseInt(n1.value)-parseInt(n2.value);
+		});
+		document.getElementById("mul").addEventListener("click",function()
+		{
+			res.value=parseInt(n1.value)*parseInt(n2.value);
+		});
+		document.getElementById("div").addEventListener("click",function()
+		{
+			res.value=parseInt(n1.value)/parseInt(n2.value);
+		});
+
+		
+	</script>
+
+</body>
+</html>

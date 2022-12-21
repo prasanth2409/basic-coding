@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>js inc </title>
+</head>
+<body>
+	<div><h1>count:<span id="totalcount">0</span></h1>
+		<button onclick="incCount()">Increment</button>
+		<button onclick="decCount()">Decrement</button>
+ 	</div>
+
+ 	<script>
+ 		let totalcount =0;
+ 		let spanTag= document.getElementById('totalcount');
+ 		spanTag.innerText=totalcount;
+
+ 		function incCount()
+ 		{
+ 			totalcount++;
+ 			spanTag.innerText=totalcount;
+ 		}
+
+ 		function decCount()
+ 		{
+ 			totalcount--;
+ 			spanTag.innerText=totalcount;
+ 			if(totalcount<=0)
+ 				totalcount =0;
+ 				
+ 		}
+
+ 		
+ 	</script>
+
+</body>
+</html>

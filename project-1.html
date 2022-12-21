@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>JAVA FORMS</title>
+</head>
+<style>
+	body {background:yellow; border:2px solid red;padding: 20px ;}
+	h1 {background:orange;color:red; padding: 15px; }
+	#static { position: relative;display:inline-block ;top:5px ; bottom:30px ; text-align: center; background:orange;color:red ; padding: 30px; }
+	#relative{ position: relative; display:inline-block;bottom:35px ;background:lightyellow; color: darkred; padding:65px 150px;font-size:large ; }
+	#text { padding: 5px 100px;background-color:orange;color:darkred ; text-align:center; font-size:x-large ; }
+</style>
+<body>
+	<h1 align="center"> JAVA JAM COFFEE HOUSE </h1>
+	<div id="static">
+		<h3> name</h3><br>
+		<h3> menu</h3><br>
+		<h3> music</h3><br>
+		<h3> jobs</h3><br>
+		
+	</div>
+	<div id="relative">
+		<h2> Jobs at Java Jan</h2>
+		<p> Want to work at JavaJan? Fill out the form below to start your application.Required fields are 
+		marked with an asterisk * </p>
+		<form>
+			<label> *Name </label>
+			<input type="text"/><br>
+			<label>*E-mail</label>
+			<input type="text"><br>
+			<label> Start Date</label>
+			<input type="Date"><br>
+			<label>*Experience</label>
+			<textarea></textarea><br>
+			<input type="submit" name="Apply now">
+		</form>		
+	</div>
+	<div id="text">
+		<p> Copyrights @Java Jam coffee house  </p>
+		
+	</div>
+</body>
+</html>

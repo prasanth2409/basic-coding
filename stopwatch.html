@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<style>
+	body{margin-top:220px;margin-left:620px;background:url(https://png.pngtree.com/thumb_back/fh260/background/20200731/pngtree-blue-carbon-background-with-sport-style-and-golden-light-image_371487.jpg);background-repeat:no-repeat;background-size: cover;}
+	.card{height:200px;width:300px;text-align:center;}
+	.card-header{background:lightblue;padding:2px 15px;border-radius:50px 20px;}
+	h1{font-size:35px;}	
+	P{font-size:40px;color:white;}
+	button{background:black;color:orangered;font-size:25px;border-radius:100px;padding:5px;}
+	button:hover {cursor:pointer;background:white;}
+</style>
+<body>
+	<div class="card">
+		<div class="card-header">
+			<h1>STOP-WATCH</h1>
+		</div>
+		<div class="card-body">
+			<p><span id="hours">00</span>:<span id="minutes">00</span>:<span id="seconds">00</span>:<span id="tens">00</span></p>			
+		</div>
+		<div class="card-footer">
+			<button id="button-start" >START</button>
+			<button id="button-stop" >STOP</button>
+			<button id="button-reset" >RESET</button>
+		</div> 
+	</div>	
+</body>
+<script>
+	window.onload = function () { 
+  var hours = 00; 
+  var minutes = 00;
+  var seconds = 00; 
+  var tens = 00; 
+  var appendTens = document.getElementById("tens")
+  var appendSeconds = document.getElementById("seconds")
+  var appendMinutes = document.getElementById("minutes")
+  var appendHours = document.getElementById("hours")
+  var buttonStart = document.getElementById('button-start');
+  var buttonStop = document.getElementById('button-stop');
+  var buttonReset = document.getElementById('button-reset');
+  var Interval;
+
+  buttonStart.onclick = function() {    
+    clearInterval(Interval);
+     Interval = setInterval(startTimer, 10);
+  }
+  
+    buttonStop.onclick = function() {
+       clearInterval(Interval);
+  }
+
+  buttonReset.onclick = function() {
+     clearInterval(Interval);
+    tens = "00";
+  	seconds = "00";
+  	minutes = "00";
+  	hours = "00";
+    appendTens.innerHTML = tens;
+  	appendSeconds.innerHTML = seconds;
+  	appendMinutes.innerHTML = minutes;
+  	appendHours.innerHTML = hours;
+  }   
+  
+  function startTimer () {
+    tens++; 
+    
+    if(tens <= 9){
+      appendTens.innerHTML = "0" + tens;
+    }
+    
+    if (tens > 9){
+      appendTens.innerHTML = tens;
+      
+    } 
+    
+    if (tens > 59) {
+      console.log("seconds");
+      seconds++;
+      appendSeconds.innerHTML = "0" + seconds;
+      tens = 0;
+      appendTens.innerHTML = "0" + 0;
+    }
+    
+    if (seconds > 9){
+      appendSeconds.innerHTML = seconds;
+    }
+
+    if (seconds > 59) {
+      console.log("minutes");
+      minutes++;
+      appendMinutes.innerHTML = "0" + minutes;
+      seconds = 0;
+      appendSeconds.innerHTML = "0" + 0;
+    }
+    
+    if (minutes > 9){
+      appendMinutes.innerHTML = minutes;
+    }
+
+    if (minutes > 59) {
+      console.log("hours");
+      hours++;
+      appendHours.innerHTML = "0" + hours;
+      minutes = 0;
+      appendMinutes.innerHTML = "0" + 0;
+    }
+    
+    if (hours > 9){
+      appendHours.innerHTML = hours;
+    }
+  
+  }  
+
+}	
+</script>
+</html>

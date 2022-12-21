@@ -1,0 +1,57 @@
+body
+{
+	margin:0px;
+	
+}
+header
+{
+	background:black;
+	color:white;
+	padding:5px 24px;
+	font-size:25px;
+	font-family:cursive ;
+}
+header>h1
+{
+	margin:0px;
+}
+header>h1>span
+{
+	color:darkorange;
+}
+div
+{
+	background-image:url(office.jpg);
+	background-color:rgba(0, 0, 0,0.2);
+	text-align:center;
+	height:inherit;
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	justify-content:center;
+	background-size:cover;
+	height:100vh;
+	color:white;
+	font-size:18`px;
+
+}
+div>h1>span
+{
+	color:orangered;
+}
+button
+{
+	background:orangered;
+	padding:5px 15px;
+	color:white;
+	border-radius:20px;
+	font-size:20px;
+}
+button:hover
+{
+	cursor:pointer;
+	box-shadow:0 0 15px white;
+}
+	
+
+	

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS TO DO LIST</title>
+	<link rel="stylesheet" href="D:\Html\MDB\css\bootstrap.css">
+	<link rel="stylesheet" href="D:\Html\MDB\css\mdb.css">
+	<link rel="stylesheet" href="D:\Html\fontawesome-free-6.2.0-web\css\all.css">	
+</head>
+<body>
+	<div class="container mt-5">
+		<div class="row">
+			<div class="col-md-6 m-auto">
+				<div class="card">
+					<div class="card-body bg-success text-center text-white">
+						<h1>Indian Digital Watch</h1>
+						<p>Asia/Kolkata</p>
+						<h2 id="time">Time</h2>
+						<h1 id="date">Date</h1>
+
+						<button id="start-btn">Start</button>
+						<button id="stop-btn">Stop</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<!-- Script Code -->
+<script>
+	let timeTag=document.getElementById('time');
+	let dateTag=document.getElementById('date');
+	let startBtn=document.getElementById('start-btn');
+	let stopBtn=document.getElementById('stop-btn');
+
+	let indianWatch=function()
+	{
+		let options={timezone:'Kolkata'};
+		let currentTime=new Date().toLocaleTimeString('en-US',options);
+		timeTag.innerText=currentTime;
+		let currentDate=new Date().toLocaleDateString('en-US',options);
+		dateTag.innerText=currentDate;
+	}
+	//indianWatch();
+
+	let interval=null;
+	startBtn.addEventListener('click',function()
+	{
+		//indianWatch();
+		interval=setInterval(indianWatch,1000);
+	})
+
+	stopBtn.addEventListener('click',function()
+	{
+		clearInterval(interval);
+	})
+</script>
+</body>
+</html>

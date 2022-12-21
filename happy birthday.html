@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Happy birthday</title>
+	<style>
+		h1
+		{
+			position:relative;
+			border:2px solid black;
+			background:lightblue;			
+			width:300px;
+			padding:8px;
+			text-align:center;
+			top:100px;
+			font-family: cursive;
+			color:darkgoldenrod;
+			font-size:35px;
+			animation:one 1s linear 0s forwards normal;							
+		}
+		@keyframes one
+		{
+			100%
+			{
+				transform:translateX(460px);
+				padding:16px;
+				background:lightgreen;
+			}
+		}		
+		div>img
+		{
+			position:relative;
+			height:300px;
+			width:300px;
+			top:50px;
+			left:470px;
+			border:5px solid darkcyan;
+			animation:two 1s linear 2s forwards normal;			
+		}
+		@keyframes two
+		{
+			100%
+			{
+				transform:translateY(40px);
+			}
+		}		
+		
+	</style>
+</head>
+<body>
+	<div> 
+		<h1>*Happy birthday*</h1>
+	</div>
+	<div>
+		<img src="cake.jpg">
+	</div>
+
+</body>
+</html>
