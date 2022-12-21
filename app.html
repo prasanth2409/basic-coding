@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FLIPKART APP </title>
+	<style>
+		div
+		{
+			box-shadow:0 0 10px black;
+			width:250px;
+			height:260px;
+			margin:60px auto;
+			border-radius:10px;
+			overflow:hidden;
+			position:relative;
+		}
+		div>img
+		{
+			width: inherit;
+			height: inherit;
+			border-radius:inherit;
+			transition:all 0s linear 0s;	
+		}
+		div:hover
+		{
+			cursor:pointer;
+		}
+		
+
+		div>#price-details
+		{
+			position:absolute ;
+			top:200px;
+			left:0px;
+			background-color:rgb(226, 203, 172);
+			height:120px;
+			transition:all 2s linear 0s;
+			border-radius:0px 0px 10px 10px;
+		}
+		div>.one
+		{
+			position:absolute ;
+			left:0px;
+			top:-190px ;
+			background-color:white;
+			color:black ;
+			border:2px solid black ;
+			border:1px solid black;
+			text-align:center;
+			margin-left:-8px;
+			box-shadow:none;
+		}
+		div>.two
+		{
+			position:absolute ;
+			left:0px;
+			top:-130px ;
+			background-color:skyblue ;
+			color:black ;
+			
+		}
+		div>.three
+		{
+			position:absolute ;
+			left:0px;
+			toppx ;
+			background-color:rosybrown;
+			color:black ;
+			display:inline-block ;
+			text-align:center ;
+			
+		}
+		div:hover>.two
+		{
+			transform:translateY(80px) ;
+		}
+		div:hover>.one
+		{
+			transform:translatex(10px) ;
+		}
+		div:hover>.three
+		{
+			transform:translatex(-10px) ;
+		}
+		
+
+		div:hover>#price-details,#one,#three
+		{
+			transform:translateY(-80px);
+		}
+		ol>li
+		{
+			list-style-type:none;
+			width:200px;
+			border:1px solid black;
+			text-align:center;
+			margin-left:-8px;
+			box-shadow:none;
+		}
+	</style>	
+</head>
+<body>
+	<div>
+		<img src="Shirt.jpg">
+		<div id="price-details">
+			<ol>
+				<li>U.S.POLO</li>
+				<li>Medium</li>
+				<li>1999.00</li>
+			</ol>
+		</div>
+		<div class="one">
+			<ol>
+				<li>season sale </li>
+			</ol>
+		</div>
+		<div class="two">
+			<ol>
+				<li>limited time </li>
+			</ol>
+		</div>
+		<div class="three">
+			<ol>
+				<li>avail soon</li>
+			</ol>
+		</div>
+	</div>
+
+</body>
+</html>

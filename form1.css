@@ -1,0 +1,22 @@
+body
+{
+	background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5ij1A4mMsXznmLiHa2m23aSxyljPgEnXoJg&usqp=CAU);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+#login
+{
+	background-color:lightsteelblue ;
+	background: linear;
+	width:300px ;
+	padding:20px ;
+	margin:100px auto ;
+	text-align:center ;
+	box-shadow: 0 0 10px yellow;
+	border-radius:20px ;
+}
+.form
+{
+	width:300px ;
+	color:yellow ;
+}
